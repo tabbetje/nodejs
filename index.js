@@ -21,13 +21,13 @@ db.connect((err) => {
     console.log("MySql Connected");
  });
 
-// runAsyncGen(GenerateJsonFile(), function(err) {
-//   if (err) {
-//       console.log(err);
-//       process.exit(1);
-//   }
-//   console.log('Done');
-// });
+ runAsyncGen(GenerateJsonFile(), function(err) {
+  if (err) {
+      console.log(err);
+      process.exit(1);
+  }
+  console.log('Done');
+});
 
 function* GenerateJsonFile() {
 	// const mySqlDbClient = mysql.createConnection({credentials object});
@@ -97,16 +97,16 @@ function* GenerateJsonFile() {
 
 const app = express();
 
-// Create data object
-app.get('/test', function(request, response){
-  // db.query('select * from employee', function(error, results){
-  //     if ( error ){
-  //         response.status(400).send('Error in database operation');
-  //     } else {
-  //         response.send(results);
-  //     }
-  // });
-});
+//  // Create data object
+// app.get('/test', function(request, response){
+//   db.query('select * from employee', function(error, results){
+//       if ( error ){
+//           response.status(400).send('Error in database operation');
+//       } else {
+//           response.send(results);
+//       }
+//   });
+// });
 
 // App listen to port 3000
 app.listen("3000", () => {
